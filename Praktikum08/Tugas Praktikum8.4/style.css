@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: pink;
+    flex: 1;
+}
+
+.kiri {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+
+.atas {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+header,footer {
+    background-color: khaki;
+    padding: 30px;
+}
+
+.atas article {
+    background-color: white;
+    flex: 1;
+}
+
+.atas aside {
+    background-color: aqua;
+    flex: 1;
+}

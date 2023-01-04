@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    min-height: 100px;
+    flex-direction: row;
+    margin: 0;
+}
+
+.inner-col-1 {
+    height: 100px;
+    background-color: yellowgreen;
+    flex: 1;
+}
+
+
+.inner-col {
+    display: flex;
+}
+
+
+.inner-col aside {
+    background-color: yellow;
+    height: 100px;
+    width: 150px;
+}
+
+
+.inner-col article {
+    flex: 1;
+    background-color: sienna;
+    height: 100px;
+}
+
+.inner-col-2 {
+    display: flex;
+}
+
+.inner-col-2 aside {
+    background-color: yellow;
+    height: 100px;
+    width: 150px;
+}
+
+.inner-col-2 article{
+    height: 100px;
+    flex: 1;
+    background-color: skyblue;
+}
+
+nav,
+aside,
+article{
+    padding: 100px;
+    margin: 10px;
+}

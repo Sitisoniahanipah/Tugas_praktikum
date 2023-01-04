@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validation</title>
+</head>
+<body>
+		<table>
+			<br>
+			Nama Pelanggan
+			<br>
+			: <input type="text" id="nama_pelanggan" required></td>
+			<br>
+			Email
+			<br>
+			: <input type="text" id="email" required></td>
+			<br>
+			Jam Keberangkatan
+			<br>
+			: <input type="text" id="jam_keberangkatan" required></td>
+			<br>
+			Tujuan Keberangkatan
+			<br>
+			: <input type="text" id="tujuan_keberangkatan" required></td>
+			<br>
+			Jumlah Tiket
+			<br>
+			: <input type="text" id="jumlah_tiket" required></td>
+			<br>
+			<td colspan="2" align="center" ><button type="button" onclick="kirim()">Submit</button></td>
+		</table>
+
+			<table>
+				<tr>
+					<td>Nama pelanggan :</td>
+					<td><p id="hasil_nama_pelanggan"></p></td>
+				</tr>
+				<tr>
+					<td>Email :</td>
+					<td><p id="hasil_email"></p></td>
+				</tr>
+				<tr>
+					<td>Jam keberangkatan :</td>
+					<td><p id="hasil_jam_keberangkatan"></p></td>
+				</tr>
+				<tr>
+					<td>Tujuan keberangkatan :</td>
+					<td><p id="hasil_tujuan_keberangkatan"></p></td>
+				</tr>
+				<tr>
+					<td>Jumlah tiket :</td>
+					<td><p id="hasil_jumlah_tiket"></p></td>
+				</tr>
+			</table>
+
+	<script type="text/javascript">
+		function kirim() {
+		  	let nama_pelanggan = document.getElementById("nama_pelanggan").value;
+		  	let email = document.getElementById("email").value;
+		  	let jam_keberangkatan = document.getElementById("jam_keberangkatan").value;
+		  	let tujuan_keberangkatan = document.getElementById("tujuan_keberangkatan").value;
+		  	let jumlah_tiket = document.getElementById("jumlah_tiket").value;
+
+
+		    if (nama_pelanggan == '' ||nama_pelanggan.length > 30) {
+		     	alert('Nama Pelanggan Tidak Boleh Kosong dan Lebih dari 30 karakter');
+		    }else if (email == '' || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false) {
+		     	alert('Email Tidak Boleh Kosong atau Tidak Sesuai');
+		    }else if (jam_keberangkatan == '' || /^(?:[01][0-9]|2[0-3]):[0-5][0-9](?::[0-5][0-9])?$/.test(jam_keberangkatan) == false) {
+		     	alert('Jam Keberangkatan Tidak Boleh Kosong dan Antara 00.00 – 23.59 ');
+		    }else if (tujuan_keberangkatan == '') {
+		     	alert('Tujuan Keberangkatan Tidak Boleh Kosong');
+		    }else if (jumlah_tiket == '' || isNaN(jumlah_tiket) || jumlah_tiket < 1 || jumlah_tiket > 10) {
+		    	alert("Jumlah Tiket Tidak Boleh Kosong dan Masukan Antara 1 - 10");
+		  	}else{
+		  		document.getElementById("hasil_nama_pelanggan").innerHTML = nama_pelanggan;
+		  		document.getElementById("hasil_email").innerHTML = email;
+		  		document.getElementById("hasil_jam_keberangkatan").innerHTML = jam_keberangkatan;
+		  		document.getElementById("hasil_tujuan_keberangkatan").innerHTML = tujuan_keberangkatan;
+		  		document.getElementById("hasil_jumlah_tiket").innerHTML = jumlah_tiket;
+		  	}
+		}
+	</script>
+</body>
+</html>

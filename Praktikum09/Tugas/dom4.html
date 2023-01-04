@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+</head>
+<body>
+    <h2>Menghitung Jumlah Dua Bilangan</h2>
+
+    <form>
+        <input type="number" id="nil1">
+            <br>
+            +
+            <br>
+        <input type="number" id="nil2" onchange="tampil()">
+            <br>
+            =
+            <br>
+        <input type="text" id="hasil">
+    </form>
+
+    <script>
+        function tampil() {
+            let n1 = document.getElementById("nil1").value;
+            let n2 = document.getElementById("nil2").value;
+            let t = n1 + n2;
+       } 
+    </script>
+
+
+</body>
+</html>
